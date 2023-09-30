@@ -1,0 +1,123 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+.footer {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../images/footer/footer.jpg);
+    height: 100%;
+    width: 48%;
+    z-index: 1;
+    border-radius: 0 20px 0 0;
+
+    // @media (max-width: v.$lg-breakpoint) {
+    //   top: 0;
+    //   left: 0;
+    //   height: 65%;
+    //   width: 100%;
+    //   border-radius: 0;
+    // }
+
+    @media (max-width: v.$md-breakpoint) {
+      top: 0;
+      left: 0;
+      height: 52%;
+      width: 100%;
+      border-radius: 0;
+    }
+    // @media (max-width: v.$sm-breakpoint) {
+    //   top: 0;
+    //   left: 0;
+    //   height: 60%;
+    //   width: 100%;
+    //   border-radius: 0;
+    // }
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+    background: url(../../images/hero/hero.png);
+    height: 80%;
+    width: 100%;
+    opacity: 0.3;
+  }
+
+  .head-text {
+    position: relative;
+    z-index: 2;
+
+    .heading {
+      font-size: 50px;
+      max-width: 350px;
+
+      @media (max-width: v.$lg-breakpoint) {
+        font-size: 42px;
+      }
+      @media (max-width: v.$md-breakpoint) {
+        font-size: 38px;
+      }
+    }
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+    top: 70px;
+
+    h5 {
+      font-size: 22px;
+      color: v.$light;
+      font-family: v.$sans-serif-alt;
+      margin-bottom: 25px;
+      font-weight: 600;
+    }
+
+    .text-link {
+      display: block;
+      margin-left: -60px;
+      margin-bottom: 4px;
+
+      @media (max-width: v.$lg-breakpoint) {
+        margin-left: -30px;
+      }
+
+      @media (max-width: v.$md-breakpoint) {
+        margin-left: -70px;
+      }
+
+      @media (max-width: v.$sm-breakpoint) {
+        margin-left: 0;
+      }
+    }
+
+    .icon {
+      // @include m.icons(v.$secondary, v.$light);
+      color: v.$primary;
+      font-size: 20px;
+    }
+
+    .social-icons {
+      @include m.d-flex(flex-start, flex-start, nowrap, 22px);
+
+      a {
+        display: block;
+        font-size: 22px;
+        color: v.$light;
+        transition: 0.5s all ease;
+
+        &:hover {
+          color: v.$primary;
+        }
+      }
+    }
+  }
+}

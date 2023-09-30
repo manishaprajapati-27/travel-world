@@ -1,0 +1,114 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+.header {
+  background: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  padding: 6px 0;
+
+  @media (max-width: v.$lg-breakpoint) {
+    background: v.$dark-alt;
+  }
+
+  .navbar {
+    @include m.d-flex(center, space-between, nowrap, 0);
+
+    @media (max-width: v.$lg-breakpoint) {
+      @include m.d-flex(flex-start, space-between, nowrap, 0);
+      flex-direction: column;
+    }
+
+    .logo {
+      display: inline-block;
+      width: 100px;
+    }
+
+    .nav-toggle {
+      border: 0;
+      outline: 0;
+      display: inline-block;
+      background: none;
+      color: v.$light;
+      font-size: 20px;
+      padding: 10px 20px;
+      border-radius: 6px;
+      display: none;
+      position: relative;
+      z-index: 4;
+      cursor: pointer;
+
+      @media (max-width: v.$lg-breakpoint) {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+      }
+    }
+
+    .navbar-nav {
+      @include m.d-flex(center, center, nowrap, 0);
+      transition: 0.5s all ease;
+
+      .nav-link {
+        color: v.$light;
+        font-weight: 400;
+        font-size: 16px;
+        margin: 0 10px;
+        padding: 0 10px;
+        font-family: v.$sans-serif-alt;
+        transition: 0.4s all ease;
+
+        &:hover {
+          color: v.$primary;
+        }
+      }
+
+      @media (max-width: v.$lg-breakpoint) {
+        height: 0;
+
+        .nav-link {
+          display: none;
+        }
+
+        .button {
+          display: none;
+        }
+
+        &.navbar-active {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          position: relative;
+          top: 0;
+          gap: 15px;
+          padding: 15px;
+          width: 100%;
+          opacity: 1;
+          position: relative;
+          top: 0;
+          height: 100%;
+
+          .nav-link {
+            display: block;
+          }
+
+          .button {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .social-icons {
+      @include m.d-flex(center, center, nowrap, 10px);
+
+      .icon {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }
+  }
+}

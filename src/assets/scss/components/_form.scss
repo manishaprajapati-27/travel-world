@@ -1,0 +1,14 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+.form-control {
+  display: block;
+  border-radius: 7px;
+  width: 100%;
+  border: 1px solid v.$dark-alt;
+  background: v.$dark-alt;
+  color: v.$light-alt;
+  font-family: v.$sans-serif;
+  padding: 14px 20px;
+  font-size: 16px;
+}
