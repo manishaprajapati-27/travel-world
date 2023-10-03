@@ -29,10 +29,11 @@ body {
   margin: 0;
   padding: 0;
   font-family: v.$sans-serif;
-  background: v.$dark;
+  background: v.$light;
   overflow-x: hidden;
   position: relative;
 }
+
 h1,
 h2,
 h3,
@@ -56,6 +57,12 @@ span {
 }
 
 p {
+  font-size: 16px;
+  font-weight: 300;
+  color: v.$light-alt;
+  line-height: 140%;
+  letter-spacing: 0.4px;
+
   a {
     color: v.$light-alt;
     transition: 0.4s all ease;
@@ -72,19 +79,11 @@ video {
   width: 100%;
 }
 
-p {
-  font-size: 16px;
-  font-weight: 300;
-  color: v.$light-alt;
-  line-height: 140%;
-  letter-spacing: 0.4px;
-}
-
 .section {
   width: 100%;
   padding: 140px 0;
   position: relative;
-  //   overflow: hidden;
+  // overflow: hidden;
 }
 
 @media (min-width: v.$lg-breakpoint) {

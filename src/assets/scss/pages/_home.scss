@@ -4,413 +4,59 @@
 // Hero Section
 .hero {
   position: relative;
-  background: v.$dark;
+  background: v.$light;
   min-height: 600px;
   height: 100vh;
   overflow: hidden;
 
-  .hero-image {
+  .image {
     min-height: 600px;
     height: 100vh;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: #02121870;
+    }
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: center;
-      opacity: 0.5;
-    }
-  }
-
-  .patterns {
-    // position: relative;
-
-    .quadrilateral-1 {
-      position: absolute;
-      z-index: 2;
-      top: -32px;
-      left: 38%;
-      width: 430px;
-      transform: rotate(5deg);
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-
-    .quadrilateral-2 {
-      position: absolute;
-      z-index: 2;
-      bottom: -40px;
-      left: 31%;
-      width: 430px;
-      transform: rotate(5deg);
-
-      img {
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
-  .flip-animate {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 4;
-    width: 60%;
-    height: 100%;
-    opacity: 0.6;
-
-    @media (max-width: v.$sm-breakpoint) {
-      display: none;
-    }
-
-    img {
-      height: 100%;
-      width: 100%;
     }
   }
 
   .text {
     position: absolute;
-    top: 50%;
-    left: 100px;
-    transform: translateY(-50%);
-    max-width: 450px;
-    z-index: 8;
+    top: 25%;
+    right: 100px;
 
-    @media (max-width: v.$lg-breakpoint) {
-      left: 30px;
-    }
-
-    .heading {
-      font-size: 45px;
-      background: linear-gradient(
-        102deg,
-        #fff 5.72%,
-        #0077be 25.67%,
-        #2f93ce 47.45%,
-        #fff 72.75%
-      );
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      line-height: 55px;
-      letter-spacing: 4px;
-
-      @media (max-width: v.$md-breakpoint) {
-        font-size: 36px;
-        line-height: 45px;
-      }
-
-      i {
-        display: inline-block;
-        color: var(--light);
-        font-weight: bold;
-        font-style: normal;
-        font-family: Arial, Helvetica, sans-serif;
-        background: linear-gradient(to right, #1d3f82, #6f8fd0, #e07e90);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -webkit-text-stroke: 0 v.$light;
-        // font-family: v.$cursive;
-      }
-    }
-    .sub-heading {
-      font-size: 20px;
-
-      span {
-        height: 4px;
-      }
-    }
-  }
-}
-
-// About Section
-
-.about {
-  .about-image {
-    // .bg-1 {
-    //   position: absolute;
-    //   z-index: 2;
-    //   top: -45px;
-    //   left: 80px;
-    //   height: 50%;
-    //   width: 140px;
-    //   background: v.$primary;
-    //   // transform: skewX(-30deg);
-    // }
-
-    // .bg-2 {
-    //   position: absolute;
-    //   z-index: 2;
-    //   bottom: -45px;
-    //   right: 80px;
-    //   height: 50%;
-    //   width: 140px;
-    //   // background: v.$secondary;
-    //   // transform: skewX(-30deg);
-    // }
-
-    .image {
-      position: relative;
-      z-index: 2;
-      width: 75%;
-      height: 500px;
-      text-align: center;
-      padding: 15px;
-      width: 55%;
-
-      &::before {
-        content: "";
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 100%;
-        width: 100%;
-        z-index: 1;
-        background: linear-gradient(160deg, #ffffff, #0077be, #ffffff);
-        border-radius: 10px;
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        right: -40px;
-        bottom: -40px;
-        height: 100%;
-        width: 100%;
-        z-index: 0;
-        background: v.$dark-alt;
-        border-radius: 10px;
-      }
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        position: relative;
-        z-index: 3;
-        filter: brightness(0.7);
-        transition: 0.5s all ease;
-
-        &:hover {
-          filter: brightness(1);
-        }
-      }
-
-      @media (max-width: v.$lg-breakpoint) {
-        width: auto;
-      }
-    }
-  }
-}
-
-// Projects Section
-
-.project {
-  position: relative;
-
-  .project-info {
-    position: relative;
-    overflow: hidden;
-    transition: 0.5s all ease;
-    height: 100%;
-    width: 100%;
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background: linear-gradient(
-        181deg,
-        rgba(0, 119, 190, 0.2) 1.33%,
-        #0077be 76.06%
-      );
-      z-index: 1;
-      opacity: 0;
-      transition: 0.8s all ease;
-    }
-
-    .image {
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: 0.8s all ease;
-      }
-    }
-
-    .text {
-      position: absolute;
-      z-index: 3;
-      bottom: 0;
-      left: 0;
-      padding: 25px;
-      opacity: 0;
-      transition: 0.8s all ease;
-
-      @media (max-width: v.$lg-breakpoint) {
-        bottom: 14px;
-        left: 14px;
-      }
-
-      h4 {
-        font-size: 25px;
-        color: v.$light;
-        margin-bottom: 10px;
-        font-weight: bold;
-        font-family: v.$sans-serif-alt;
-
-        @media (max-width: v.$lg-breakpoint) {
-          font-size: 18px;
-          font-weight: 500;
-        }
-      }
-      p {
-        @media (max-width: v.$lg-breakpoint) {
-          font-size: 12px;
-        }
-      }
-
-      .tech-use {
-        @include m.d-flex(flex-start, flex-start, nowrap, 10px);
-
-        span {
-          color: v.$secondary;
-          font-family: v.$cursive;
-          font-size: 18px;
-          font-weight: bold;
-
-          a {
-            color: v.$secondary;
-            font-family: v.$cursive;
-            font-size: 20px;
-            font-weight: bold;
-          }
-
-          @media (max-width: v.$lg-breakpoint) {
-            font-size: 10px;
-          }
-        }
-      }
-    }
-
-    &:hover {
-      .text {
-        // bottom: 25px;
-        opacity: 1;
-      }
-
-      &::after {
-        // bottom: 0;
-        opacity: 1;
-      }
-
-      .image {
-        img {
-          transform: scale(1.08);
-          opacity: 0.5;
-        }
-      }
-    }
-  }
-}
-
-// Small Project Section
-
-.small-project {
-  .card {
-    @include m.card-style;
-
-    .image {
-      border-radius: 10px;
-      overflow: hidden;
+    h4 {
+      color: v.$light;
+      font-family: v.$cursive;
+      font-weight: 300;
+      font-size: 24px;
       margin-bottom: 15px;
-      height: 220px;
-
-      img {
-        transition: 0.5s all ease;
-      }
     }
 
-    .text {
-      position: relative;
-
-      h3 {
-        font-size: 20px;
-        color: v.$light;
-        font-family: v.$sans-serif-alt;
-        margin-bottom: 10px;
-        font-weight: 600;
-        text-transform: capitalize;
-        transition: 0.5s all ease;
-      }
-
-      h5 {
-        font-size: 16px;
-        color: v.$light-alt;
-        font-weight: 400;
-        margin-bottom: 10px;
-        opacity: 0.7;
-        transition: 0.5s all ease;
-      }
-
-      .link-btns {
-        @include m.d-flex(flex-start, flex-start, nowrap, 10px);
-        position: absolute;
-        top: 0px;
-        right: 0;
-
-        .arrow {
-          display: block;
-          height: 35px;
-          width: 35px;
-          line-height: 35px;
-          text-align: center;
-          border-radius: 4px;
-          background: transparent;
-          color: v.$primary;
-          border: 1px solid v.$primary;
-          opacity: 0.5;
-          transition: 0.5s all ease;
-
-          &:hover {
-            background: v.$primary;
-            color: v.$light;
-            opacity: 1;
-            cursor: pointer;
-          }
-        }
-      }
+    h2 {
+      margin-bottom: 15px;
+      font-size: 35px;
     }
 
-    &:hover {
-      .image {
-        img {
-          transform: scale(1.06);
-        }
-      }
-      .text {
-        h3 {
-          color: v.$primary;
-        }
-
-        h5 {
-          opacity: 1;
-        }
-      }
+    h5 {
+      color: v.$light;
+      font-family: v.$cursive-alt;
+      font-weight: 300;
+      font-size: 24px;
+      margin-bottom: 15px;
+      text-align: end;
     }
   }
 }

@@ -1,26 +1,11 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 
-// .heading {
-//     font-size: 35px;
-//     color: v.$light;
-//     font-weight: bold;
-//     font-family: v.$sans-serif-alt;
-//     margin-bottom: 20px;
-//     line-height: 140%;
-
-//     .first-head {
-//       // -webkit-text-fill-color: transparent;
-//       // -webkit-text-stroke: 1px v.$light;
-//       letter-spacing: 2px;
-//     }
-//   }
-
 .heading {
   display: block;
   color: #fff;
   font-weight: bold;
-  font-family: v.$sans-serif-alt;
+  // font-family: v.$sans-serif-alt;
   font-size: 30px;
   letter-spacing: 2px;
   text-transform: capitalize;
