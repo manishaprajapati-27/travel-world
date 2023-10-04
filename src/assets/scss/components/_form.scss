@@ -1,7 +1,8 @@
 @use "../abstract/variables" as v;
 @use "../abstract/mixins" as m;
 
-.form-control {
+.form-control,
+.form-select {
   display: block;
   border-radius: 7px;
   width: 100%;
