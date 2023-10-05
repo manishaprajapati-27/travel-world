@@ -59,12 +59,12 @@ span {
 p {
   font-size: 16px;
   font-weight: 300;
-  color: v.$light-alt;
+  color: v.$dark-alt;
   line-height: 140%;
   letter-spacing: 0.4px;
 
   a {
-    color: v.$light-alt;
+    color: v.$dark-alt;
     transition: 0.4s all ease;
 
     &:hover {

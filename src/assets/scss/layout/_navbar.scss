@@ -2,15 +2,15 @@
 @use "../abstract/mixins" as m;
 
 .header {
-  background: none;
-  position: absolute;
+  background: v.$light;
+  position: relative;
   z-index: 10;
   top: 0;
   width: 100%;
   padding: 6px 0;
 
   @media (max-width: v.$lg-breakpoint) {
-    background: v.$dark-alt;
+    // background: v.$li;
   }
 
   .navbar {
@@ -23,7 +23,7 @@
 
     .logo {
       display: inline-block;
-      width: 100px;
+      // width: 100px;
     }
 
     .nav-toggle {
@@ -53,7 +53,7 @@
       transition: 0.5s all ease;
 
       .nav-link {
-        color: v.$light;
+        color: v.$dark;
         font-weight: 400;
         font-size: 16px;
         margin: 0 10px;

@@ -48,6 +48,7 @@
     h2 {
       margin-bottom: 15px;
       font-size: 35px;
+      color: v.$light;
     }
 
     h5 {
@@ -75,7 +76,7 @@
       height: 120px;
       border-radius: 5px;
       border: 2px solid v.$primary;
-      padding: 5px;
+      padding: 3px;
       position: relative;
 
       .batch {
@@ -112,3 +113,143 @@
 }
 
 // Offers
+
+.offers {
+  background: var(--primary);
+
+  .card {
+    position: relative;
+    height: 440px;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 1px solid v.$light;
+      height: calc(100% - 30px);
+      width: calc(100% - 30px);
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .info {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 0;
+      text-align: center;
+      z-index: 2;
+
+      img {
+        position: relative;
+        top: -10px;
+      }
+
+      .text {
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        width: 100%;
+        text-align: center;
+        transform: translateX(-50%);
+        z-index: 3;
+
+        h5 {
+          font-size: 18px;
+          color: v.$light;
+          margin-bottom: 10px;
+          font-weight: 400;
+        }
+        h3 {
+          font-size: 24px;
+          color: v.$light;
+          margin-bottom: 10px;
+          font-weight: bold;
+          font-family: v.$cursive-alt;
+        }
+        h6 {
+          font-size: 16px;
+          color: v.$light;
+          font-weight: 400;
+        }
+      }
+
+      &.even-info {
+        top: 0;
+        transform: translateY(136%);
+
+        img {
+          position: relative;
+          top: 10px;
+        }
+
+        .text {
+          position: absolute;
+          top: calc(100% - 100px);
+        }
+      }
+    }
+  }
+}
+
+// About
+
+.about {
+  background: v.$light-alt;
+
+  .images {
+    img {
+      border-radius: 4px;
+      box-shadow: 0 0 15px #02121834;
+    }
+  }
+
+  .text {
+    text-align: start;
+
+    .info {
+      .icon-row {
+        flex-wrap: nowrap;
+        margin-bottom: 10px;
+      }
+      .icon {
+        background: v.$primary;
+        border-radius: 4px;
+        height: 60px;
+        width: 60px;
+        padding: 10px;
+      }
+      h4 {
+        font-size: 18px;
+        font-weight: 600;
+        color: v.$dark;
+      }
+    }
+  }
+}
+
+.we-are-best {
+  background: v.$light;
+
+  .accordian {
+    margin-bottom: 30px;
+
+    .head {
+      background: v.$light-alt;
+      padding: 15px 20px;
+      margin-bottom: 15px;
+    }
+
+    p {
+      padding: 15px 20px;
+    }
+  }
+}

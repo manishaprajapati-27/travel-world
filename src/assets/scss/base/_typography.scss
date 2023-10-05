@@ -27,13 +27,12 @@
 }
 
 .sub-heading {
-  color: #fff;
-  font-family: Bricolage Grotesque;
-  font-size: 18px;
+  color: v.$primary;
+  font-family: v.$cursive-alt;
+  font-size: 20px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: bold;
   line-height: 190%;
-  letter-spacing: 3.2px;
 
   span {
     display: inline-block;
