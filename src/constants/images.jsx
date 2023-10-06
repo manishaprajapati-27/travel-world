@@ -3,6 +3,7 @@ import logo from "../assets/images/logo.png";
 
 // Hero
 import hero from "../assets/images/hero/hero.jpg";
+import heropages from "../assets/images/hero/hero-pages.jpg";
 
 // Destination
 import tajmahel from "../assets/images/destination/1.jpg";
@@ -24,6 +25,12 @@ import about2 from "../assets/images/about/about-images/2.jpg";
 import about3 from "../assets/images/about/about-images/3.jpg";
 import about4 from "../assets/images/about/about-images/4.jpg";
 
+// We are best
+import righthandicon from "../assets/images/we-are-best/right-hand-icon.png";
+
+// Hotels
+import peakmountain from "../assets/images/hotels/peak-mountain.jpg";
+
 export {
   logo,
   hero,
@@ -41,4 +48,7 @@ export {
   about2,
   about3,
   about4,
+  righthandicon,
+  heropages,
+  peakmountain,
 };

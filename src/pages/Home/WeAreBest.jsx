@@ -1,4 +1,5 @@
 import React from "react";
+import { righthandicon } from "../../constants/images";
 
 const WeAreBest = () => {
   return (
@@ -6,7 +7,10 @@ const WeAreBest = () => {
       <div className="container">
         <div className="accordian">
           <div className="head">
-            <h4>We have the best Travel Packages</h4>
+            <h4 className="d-flex align-items-center">
+              <img src={righthandicon} alt="" /> We have the best Travel
+              Packages
+            </h4>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
@@ -16,7 +20,10 @@ const WeAreBest = () => {
         </div>
         <div className="accordian">
           <div className="head">
-            <h4>We have the best Travel Packages</h4>
+            <h4 className="d-flex align-items-center">
+              <img src={righthandicon} alt="" /> We have the best Travel
+              Packages
+            </h4>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
@@ -26,7 +33,10 @@ const WeAreBest = () => {
         </div>
         <div className="accordian">
           <div className="head">
-            <h4>We have the best Travel Packages</h4>
+            <h4 className="d-flex align-items-center">
+              <img src={righthandicon} alt="" /> We have the best Travel
+              Packages
+            </h4>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum

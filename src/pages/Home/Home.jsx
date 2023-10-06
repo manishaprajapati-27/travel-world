@@ -2,7 +2,7 @@ import React from "react";
 import HeroSection from "./HeroSection";
 import Destination from "./Destination";
 import Offers from "./Offers";
-import About from "./About";
+import AboutUs from "./AboutUs";
 import WeAreBest from "./WeAreBest";
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
       <HeroSection />
       <Destination />
       <Offers />
-      <About />
+      <AboutUs />
       <WeAreBest />
     </>
   );

@@ -5,6 +5,9 @@
   &-primary {
     color: v.$primary;
   }
+  &-secondary {
+    color: v.$secondary;
+  }
   &-light {
     color: v.$light;
   }
@@ -16,6 +19,27 @@
   }
   &-dark-alt {
     color: v.$dark-alt;
+  }
+}
+
+.bg {
+  &-primary {
+    background: v.$primary;
+  }
+  &-secondary {
+    background: v.$secondary;
+  }
+  &-light {
+    background: v.$light;
+  }
+  &-light-alt {
+    background: v.$light-alt;
+  }
+  &-dark {
+    background: v.$dark;
+  }
+  &-dark-alt {
+    background: v.$dark-alt;
   }
 }
 

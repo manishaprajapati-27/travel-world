@@ -1,31 +1,54 @@
 import React from "react";
-// import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { logo } from "../constants/images";
+import { FiHome, FiCoffee, FiPhone } from "react-icons/fi";
+import { GiCommercialAirplane, GiInfo, GiShoppingCart } from "react-icons/gi";
 
 const Navbar = () => {
   return (
     <header className="header">
       <div className="container">
         <nav className="navbar">
-          <a href="#" className="logo">
+          <Link to={"/"} className="logo">
             <img src={logo} alt="Travel World" />
-          </a>
+          </Link>
           <div className="navbar-nav">
-            <a href="#" className="nav-link">
+            <NavLink to={"/"} className="nav-link">
+              <span>
+                <FiHome />
+              </span>
               Home
-            </a>
-            <a href="#" className="nav-link">
-              Hotel
-            </a>
-            <a href="#" className="nav-link">
-              Place
-            </a>
-            <a href="#" className="nav-link">
+            </NavLink>
+            <NavLink to={"/hotels"} className="nav-link">
+              <span>
+                <FiCoffee />
+              </span>
+              Hotels
+            </NavLink>
+            <NavLink to={"/places"} className="nav-link">
+              <span>
+                <GiCommercialAirplane />
+              </span>
+              Places
+            </NavLink>
+            <NavLink to={"/about"} className="nav-link">
+              <span>
+                <GiInfo />
+              </span>
               About
-            </a>
-            <a href="#" className="nav-link">
+            </NavLink>
+            <NavLink to={"/packages"} className="nav-link">
+              <span>
+                <GiShoppingCart />
+              </span>
               Packages
-            </a>
+            </NavLink>
+            <NavLink to={"/contact"} className="nav-link">
+              <span>
+                <FiPhone />
+              </span>
+              Contact
+            </NavLink>
           </div>
         </nav>
       </div>

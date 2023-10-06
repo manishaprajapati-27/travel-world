@@ -1,7 +1,7 @@
 import React from "react";
 import { icon2, about1, about2, about3, about4 } from "../../constants/images";
 
-const About = () => {
+const AboutUs = () => {
   return (
     <section className="section about">
       <div className="container">
@@ -114,4 +114,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutUs;
