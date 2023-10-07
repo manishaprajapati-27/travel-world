@@ -134,4 +134,34 @@
       }
     }
   }
+
+  .gallery {
+    .gallery-card {
+      margin-bottom: 25px;
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-fit: center;
+      }
+      .text {
+        h5 {
+          font-size: 18px;
+          margin-bottom: 7px;
+          font-weight: 500;
+          // display: -webkit-box;
+          // -webkit-line-clamp: 1;
+          // -webkit-box-orient: vertical;
+        }
+        p {
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          font-size: 15px;
+        }
+      }
+    }
+  }
 }

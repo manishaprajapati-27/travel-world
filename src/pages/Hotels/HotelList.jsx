@@ -10,14 +10,14 @@ const HotelList = () => {
         <div className="row">
           <div className="col-lg-8 col-md-12 col-sm-12">
             <div className="row">
-              <div className="col-9">
+              <div className="col-8">
                 <input
                   type="search"
                   className="form-control"
                   placeholder="Search by name, address, etc.."
                 />
               </div>
-              <div className="col-3">
+              <div className="col-4">
                 <button className="button">Find Now</button>
               </div>
             </div>
@@ -156,6 +156,71 @@ const HotelList = () => {
                     >
                       <FiMapPin className="icon" /> View On Map
                     </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-4 col-md-12 col-sm-12">
+            <div className="gallery">
+              <h2 className="heading mb-2">Latest Gallery</h2>
+              <div className="gallery-card">
+                <div className="row">
+                  <div className="col-4">
+                    <img src={peakmountain} alt="" />
+                  </div>
+                  <div className="col-8">
+                    <div className="text">
+                      <h5>Praesent Eget Placerat</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Animi neque eligendi doloremque. Ad unde similique
+                        temporibus sint natus, adipisci voluptatum, reiciendis
+                        maiores placeat recusandae accusantium laudantium.
+                        Corrupti architecto ut id laudantium distinctio illum
+                        similique, officiis pariatur sequi magnam, illo aut!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="gallery-card">
+                <div className="row">
+                  <div className="col-4">
+                    <img src={peakmountain} alt="" />
+                  </div>
+                  <div className="col-8">
+                    <div className="text">
+                      <h5>Praesent Eget Placerat</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Animi neque eligendi doloremque. Ad unde similique
+                        temporibus sint natus, adipisci voluptatum, reiciendis
+                        maiores placeat recusandae accusantium laudantium.
+                        Corrupti architecto ut id laudantium distinctio illum
+                        similique, officiis pariatur sequi magnam, illo aut!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="gallery-card">
+                <div className="row">
+                  <div className="col-4">
+                    <img src={peakmountain} alt="" />
+                  </div>
+                  <div className="col-8">
+                    <div className="text">
+                      <h5>Praesent Eget Placerat</h5>
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Animi neque eligendi doloremque. Ad unde similique
+                        temporibus sint natus, adipisci voluptatum, reiciendis
+                        maiores placeat recusandae accusantium laudantium.
+                        Corrupti architecto ut id laudantium distinctio illum
+                        similique, officiis pariatur sequi magnam, illo aut!
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
