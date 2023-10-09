@@ -1,13 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../animation";
+import PlacesHero from "./PlacesHero";
 
 const Places = () => {
   return (
-    <section className="section places">
-      <div className="container">
-        <h2>Places</h2>
-      </div>
-    </section>
+    <motion.div
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
+      <PlacesHero />
+    </motion.div>
   );
 };
-
 export default Places;

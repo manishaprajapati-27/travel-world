@@ -1,10 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { logo } from "../constants/images";
 import { FiHome, FiCoffee, FiPhone } from "react-icons/fi";
 import { GiCommercialAirplane, GiInfo, GiShoppingCart } from "react-icons/gi";
 
 const Navbar = () => {
+  const { pathname } = useLocation();
+
   return (
     <header className="header">
       <div className="container">

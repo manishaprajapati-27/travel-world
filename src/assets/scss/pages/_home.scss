@@ -244,19 +244,19 @@
     margin-bottom: 30px;
 
     .head {
-      background: v.$light-alt;
-      padding: 15px 20px;
-      margin-bottom: 15px;
-
       h4 {
+        background: v.$light-alt;
+        padding: 15px 20px;
+        margin-bottom: 15px;
         color: v.$dark;
         font-size: 20px;
         font-weight: 500;
-      }
+        cursor: pointer;
 
-      img {
-        width: 28px;
-        margin-right: 7px;
+        img {
+          width: 28px;
+          margin-right: 7px;
+        }
       }
     }
 
