@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { peakmountain } from "../../constants/images";
 import { FiMapPin } from "react-icons/fi";
+import { motion } from "framer-motion";
+import { lineAnim } from "../../animation";
 
 const HotelList = () => {
   return (
@@ -163,7 +165,8 @@ const HotelList = () => {
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="gallery">
-              <h2 className="heading mb-2">Latest Gallery</h2>
+              <h2 className="heading mb-1">Latest Gallery</h2>
+              <motion.div className="line" variants={lineAnim}></motion.div>
               <div className="gallery-card">
                 <div className="row">
                   <div className="col-4">

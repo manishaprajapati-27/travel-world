@@ -1,12 +1,18 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { pageAnimation } from "../../animation";
+import AboutHero from "./AboutHero";
 
 const About = () => {
   return (
-    <section className="section places">
-      <div className="container">
-        <h2>About Us Page</h2>
-      </div>
-    </section>
+    <motion.div
+      exit="exit"
+      variants={pageAnimation}
+      initial="hidden"
+      animate="show"
+    >
+      <AboutHero />
+    </motion.div>
   );
 };
 

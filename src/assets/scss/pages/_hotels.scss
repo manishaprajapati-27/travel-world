@@ -136,6 +136,12 @@
   }
 
   .gallery {
+    .line {
+      background: v.$secondary;
+      height: 4px;
+      width: 100%;
+      margin-bottom: 40px;
+    }
     .gallery-card {
       margin-bottom: 25px;
 
