@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
 import HotelHero from "./HotelHero";
 import HotelList from "./HotelList";
+import HotelDetails from "./HotelDetail.jsx";
 
 const Hotels = () => {
   return (
@@ -14,6 +15,7 @@ const Hotels = () => {
     >
       <HotelHero />
       <HotelList />
+      <HotelDetails />
     </motion.div>
   );
 };

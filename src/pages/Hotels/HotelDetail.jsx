@@ -1,56 +1,54 @@
-import React from "react";
-import { useState, useEffect } from "react";
-// import { useHistory } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { HotelDetails } from "../../Data";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const HotelDetail = () => {
-  const navigate = useNavigate(HotelDetails);
-  console.log(navigate);
-  // const url = navigate.location.pathname;
-  const [hotels, setHotels] = useState();
-  const [hotel, setHotel] = useState(null);
-
-  // useEffect
-  // useEffect(() => {
-  //   const currentHotel = hotels.filter((HotelDetails) => HotelDetails === url);
-  //   setHotel(currentHotel[0]);
-  // }, [hotels, url]);
-  // console.log(hotel);
-  return (
-    // {hotel && (
-    <section className="section hotel-details">
-      <div className="container">
-        <h1 className="heading">heyyyy..</h1>
-        <div className="row">
-          <div className="col-lg-5 col-md-5 col-sm-12">
-            <div className="image">
-              {/* <img src={hotel.image} alt="" /> */}
-            </div>
-          </div>
-        </div>
-
-        <div className="award">
-          {hotel.awards.map((award) => (
-            <Award title={award.title} />
-          ))}
-        </div>
-      </div>
-    </section>
-    // )}
-  );
+const options = {
+  method: "GET",
+  url: "https://booking-com15.p.rapidapi.com/api/v1/hotels/getHotelDetails",
+  params: {
+    hotel_id: "191605",
+    arrival_date: "2024-02-22",
+    departure_date: "2024-02-26",
+    adults: "1",
+    children_age: "1,17",
+    room_qty: "10",
+    languagecode: "en-us",
+    currency_code: "EUR",
+  },
+  headers: {
+    "X-RapidAPI-Key": "api_key",
+    "X-RapidAPI-Host": "booking-com15.p.rapidapi.com",
+  },
 };
 
-const Award = () => {
+const HotelDetail = () => {
+  const [loading, setLoading] = useState(true);
+  const [hotelData, setHotelData] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchHotelDetails = async () => {
+      try {
+        const response = await axios.request(options);
+        // console.log(response.data);
+
+        setHotelData(response.data);
+      } catch (error) {
+        setError(error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchHotelDetails();
+  }, []);
+
+  if (loading) return <div>Loading...</div>;
+  if (error) return <div>Error: {error.message}</div>;
+  if (!hotelData) return null;
+
   return (
-    <div className="award">
-      <h4>Title</h4>
-      <div className="line">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, harum
-          quas illum fugit sunt excepturi.
-        </p>
-      </div>
+    <div>
+      {/* Render hotel details here */}
+      <pre>{JSON.stringify(hotelData, null, 2)}</pre>
     </div>
   );
 };
