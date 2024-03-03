@@ -15,7 +15,6 @@ const Hotels = () => {
     >
       <HotelHero />
       <HotelList />
-      <HotelDetails />
     </motion.div>
   );
 };

@@ -5,6 +5,7 @@ import Places from "./pages/Places/Places";
 import Packages from "./pages/Packages/Packages";
 import About from "./pages/About/About";
 import Navbar from "./components/Navbar";
+// import HotelDetail from "./pages/Hotels/HotelDetail";
 import HotelDetail from "./pages/Hotels/HotelDetail";
 
 // Animation
@@ -22,7 +23,14 @@ const App = () => {
           <Route Component={Hotels} path="/hotels" element={<Hotels />} />
           <Route
             Component={HotelDetail}
-            path="/hotels/:id"
+            path="/detail/:id"
+            render={({ match }) => (
+              <HotelDetail
+                hotel={hotels.find(
+                  (hotel) => hotel.hotel_id === parseInt(match.params.id)
+                )}
+              />
+            )}
             element={<HotelDetail />}
           />
           <Route Component={Places} path="/places" element={<Places />} />
