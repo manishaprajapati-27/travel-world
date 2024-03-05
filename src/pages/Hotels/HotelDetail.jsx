@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FiMapPin } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
@@ -12,7 +12,7 @@ const HotelDetail = ({ hotel }) => {
       <div className="container">
         <div className="row">
           <div className="col-lg-8 col-md-12 col-sm-12">
-            <div className="row"></div>
+            {/* <div className="row"></div> */}
             <div className="hotels">
               <div className="card">
                 <div className="row">
@@ -62,54 +62,9 @@ const HotelDetail = ({ hotel }) => {
                   </div>
                 </div>
               </div>
-              {/* <div className="card">
-                <div className="row">
-                  <div className="col-lg-4 col-md-12 col-sm-12">
-                    <div className="image">
-                      <img src={peakmountain} alt="" />
-                    </div>
-                    <div className="d-flex align-items-center justify-content-center buttons">
-                      <a href="#" className="button">
-                        Book Now
-                      </a>
-                      <a href="#" className="button">
-                        View Details
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-lg-8 col-md-12 col-sm-12">
-                    <Link to="#" className="text">
-                      <div className="d-flex align-items-center head">
-                        <h3>Peak Mountain View,</h3>
-                        <span>401-451 Clay St, USA</span>
-                      </div>
-                      <div className="d-flex align-items-center breadcrumb">
-                        <p>
-                          <i>Batchelor</i>
-                        </p>
-                        <span className="text-secondary">|</span>
-                        <p>
-                          <i>Romance</i>
-                        </p>
-                      </div>
-                    </Link>
-                    <p className="mb-1">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Cumque quibusdam corporis natus dicta asperiores
-                      perspiciatis odit at sunt ab eius!
-                    </p>
-                    <Link
-                      to="#"
-                      className="d-flex align-items-center link text-primary"
-                    >
-                      <FiMapPin className="icon" /> View On Map
-                    </Link>
-                  </div>
-                </div>
-              </div> */}
             </div>
           </div>
-          <div className="col-lg-4 col-md-12 col-sm-12">
+          {/* <div className="col-lg-4 col-md-12 col-sm-12">
             <div className="gallery">
               <h2 className="heading mb-1">Latest Gallery</h2>
               <motion.div className="line" variants={lineAnim}></motion.div>
@@ -174,7 +129,7 @@ const HotelDetail = ({ hotel }) => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
