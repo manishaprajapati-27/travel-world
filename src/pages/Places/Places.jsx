@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import PlacesHero from "./PlacesHero";
+import PageHero from "../../components/PageHero";
 
 const Places = () => {
   return (
@@ -11,7 +11,7 @@ const Places = () => {
       initial="hidden"
       animate="show"
     >
-      <PlacesHero />
+      <PageHero title="Places" />
     </motion.div>
   );
 };

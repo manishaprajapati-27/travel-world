@@ -1,9 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import HotelHero from "./HotelHero";
+import PageHero from "../../components/PageHero";
 import HotelList from "./HotelList";
-import HotelDetails from "./HotelDetail.jsx";
 
 const Hotels = () => {
   return (
@@ -13,7 +12,7 @@ const Hotels = () => {
       initial="hidden"
       animate="show"
     >
-      <HotelHero />
+      <PageHero title="Hotels" />
       <HotelList />
     </motion.div>
   );

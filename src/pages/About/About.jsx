@@ -1,7 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { pageAnimation } from "../../animation";
-import AboutHero from "./AboutHero";
+import PageHero from "../../components/PageHero";
+import AboutUs from "../Home/AboutUs";
 
 const About = () => {
   return (
@@ -11,7 +12,8 @@ const About = () => {
       initial="hidden"
       animate="show"
     >
-      <AboutHero />
+      <PageHero title="About" />
+      <AboutUs />
     </motion.div>
   );
 };

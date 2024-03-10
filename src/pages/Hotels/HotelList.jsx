@@ -6,7 +6,6 @@ import { FiMapPin } from "react-icons/fi";
 import { motion } from "framer-motion";
 import { lineAnim } from "../../animation";
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
-import HotelDetail from "./HotelDetail";
 // import "../../../public/data.json";
 
 const HotelList = () => {
@@ -71,7 +70,7 @@ const HotelList = () => {
                               Book Now
                             </a>
                             <Link
-                              to={`/detail/${hotel.hotel_id}`}
+                              to={`/hotels/${hotel.hotel_id}`}
                               className="button"
                             >
                               View Details

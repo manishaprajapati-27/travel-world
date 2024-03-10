@@ -8,9 +8,11 @@ import Places from "./pages/Places/Places";
 import Packages from "./pages/Packages/Packages";
 import About from "./pages/About/About";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 // import HotelDetail from "./pages/Hotels/HotelDetail";
 import HotelDetail from "./pages/Hotels/HotelDetail";
-import HotelList from "./pages/Hotels/HotelList";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 // import data from "../public/data.json";
 
 // Animation
@@ -43,39 +45,13 @@ const App = () => {
         <Routes location={location} key={location.path}>
           <Route Component={Home} path="/" element={<Home />} />
           <Route Component={Hotels} path="/hotels" element={<Hotels />} />
-          {/* <Route
-            Component={HotelDetail}
-            path="/detail/:id"
-            render={({ match }) => {
-              const hotelId = parseInt(match.params.id);
-              const selectedHotel = hotels.find(
-                (hotel) => hotel.hotel_id === hotelId
-              );
-              <HotelDetail hotel={selectedHotel} />;
-              //   <HotelDetail
-              //     hotel={hotels.find(
-              //       (hotel) => hotel.hotel_id === parseInt(match.params.id)
-              //     )}
-              //   />
-            }}
-            element={<HotelDetail />}
-          /> */}
-          <Route
-            path="/detail/:id"
-            element={<HotelDetail />}
-            render={({ match }) => {
-              const hotelId = parseInt(match.params.id);
-              const selectedHotel = hotels.find(
-                (hotel) => hotel.hotel_id === hotelId
-              );
-              return <HotelDetail hotel={selectedHotel} />;
-            }}
-          />
+          <Route path="/hotels/:id" element={<HotelDetail />} />
           <Route Component={Places} path="/places" element={<Places />} />
           <Route Component={About} path="/about" element={<About />} />
           <Route Component={Packages} path="/packages" element={<Packages />} />
         </Routes>
       </AnimatePresence>
+      <Footer />
     </div>
   );
 };

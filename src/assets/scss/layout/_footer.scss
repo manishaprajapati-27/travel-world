@@ -4,68 +4,12 @@
 .footer {
   position: relative;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: url(../../images/footer/footer.jpg);
-    height: 100%;
-    width: 48%;
-    z-index: 1;
-    border-radius: 0 20px 0 0;
-
-    // @media (max-width: v.$lg-breakpoint) {
-    //   top: 0;
-    //   left: 0;
-    //   height: 65%;
-    //   width: 100%;
-    //   border-radius: 0;
-    // }
-
-    @media (max-width: v.$md-breakpoint) {
-      top: 0;
-      left: 0;
-      height: 52%;
-      width: 100%;
-      border-radius: 0;
-    }
-    // @media (max-width: v.$sm-breakpoint) {
-    //   top: 0;
-    //   left: 0;
-    //   height: 60%;
-    //   width: 100%;
-    //   border-radius: 0;
-    // }
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    z-index: 0;
-    background: url(../../images/hero/hero.png);
-    height: 80%;
-    width: 100%;
-    opacity: 0.3;
-  }
-
-  .head-text {
-    position: relative;
-    z-index: 2;
-
-    .heading {
-      font-size: 50px;
-      max-width: 350px;
-
-      @media (max-width: v.$lg-breakpoint) {
-        font-size: 42px;
-      }
-      @media (max-width: v.$md-breakpoint) {
-        font-size: 38px;
-      }
-    }
+  .logo {
+    width: 220px;
+    margin-bottom: 20px;
+    background: v.$light;
+    padding: 20px;
+    border: 2px solid v.$primary;
   }
 
   .text {
@@ -81,10 +25,20 @@
       font-weight: 600;
     }
 
+    .links {
+      @include m.d-flex(center, start, wrap, 10px);
+    }
+
     .text-link {
       display: block;
-      margin-left: -60px;
-      margin-bottom: 4px;
+      margin-bottom: 10px;
+      color: v.$light-alt;
+      transition: 0.4s all ease;
+      @include m.d-flex(center, start, nowrap, 5px);
+
+      &:hover {
+        color: v.$secondary;
+      }
 
       @media (max-width: v.$lg-breakpoint) {
         margin-left: -30px;
@@ -119,5 +73,10 @@
         }
       }
     }
+  }
+
+  .copy {
+    background: v.$primary;
+    padding: 12px 0;
   }
 }

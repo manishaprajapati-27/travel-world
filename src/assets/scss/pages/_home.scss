@@ -74,27 +74,27 @@
     .image {
       background: v.$light;
       height: 120px;
-      border-radius: 5px;
       border: 2px solid v.$primary;
       padding: 3px;
       position: relative;
+      transition: 0.5s all ease;
+      cursor: pointer;
 
       .batch {
         background: v.$primary;
         color: v.$light;
         font-size: 14px;
         padding: 5px 10px;
-        border-radius: 4px;
         position: absolute;
         bottom: -12px;
         left: 50%;
         transform: translateX(-50%);
+        transition: 0.5s all ease;
       }
 
       img {
         width: 100%;
         height: 100%;
-        border-radius: 5px;
         object-fit: cover;
         object-position: center;
       }
@@ -107,6 +107,22 @@
         font-weight: 600;
         font-size: 20px;
         color: v.$dark;
+        transition: 0.5s all ease;
+      }
+    }
+    &:hover {
+      .image {
+        border-color: v.$secondary;
+        transform: scale(1.07);
+      }
+
+      .batch {
+        background: v.$secondary;
+        color: v.$dark;
+      }
+
+      h4 {
+        color: v.$secondary;
       }
     }
   }
@@ -121,6 +137,7 @@
     position: relative;
     height: 440px;
     overflow: hidden;
+    cursor: pointer;
 
     &::after {
       content: "";
@@ -138,6 +155,7 @@
       width: 100%;
       object-fit: cover;
       object-position: center;
+      transition: 0.5s all ease;
     }
 
     .info {
@@ -195,6 +213,12 @@
           position: absolute;
           top: calc(100% - 100px);
         }
+      }
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.07);
       }
     }
   }

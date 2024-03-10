@@ -1,0 +1,102 @@
+@use "../abstract/variables" as v;
+@use "../abstract/mixins" as m;
+
+.hotel-detail {
+  position: relative;
+
+  .hotel-carousel {
+    margin-bottom: 20px;
+
+    .image {
+      height: 460px;
+      width: 100%;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    .owl-next {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      background-color: v.$primary !important;
+      height: 60px;
+      width: 50px;
+      transform: translateY(-50%);
+      transition: 0.5s all ease;
+
+      &:hover {
+        background-color: v.$secondary !important;
+        span {
+          color: v.$dark;
+        }
+      }
+
+      span {
+        font-size: 40px;
+        color: v.$light;
+
+        &:hover {
+          color: v.$dark;
+        }
+      }
+    }
+    .owl-prev {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      background-color: v.$primary !important;
+      height: 60px;
+      width: 50px;
+      transform: translateY(-50%);
+      transition: 0.5s all ease;
+
+      &:hover {
+        background-color: v.$secondary !important;
+        span {
+          color: v.$dark;
+        }
+      }
+
+      span {
+        font-size: 40px;
+        color: v.$light;
+      }
+    }
+  }
+
+  .text {
+    h3 {
+      font-size: 30px;
+      color: v.$dark;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    span {
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+
+  .breadcrumb {
+    gap: 10px;
+  }
+
+  .rates {
+    @include m.d-flex(center, start, nowrap, 5px);
+    margin-bottom: 15px;
+    svg {
+      color: v.$secondary;
+    }
+  }
+
+  .time {
+    @include m.d-flex(start, center, nowrap, 7px);
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
