@@ -78,7 +78,10 @@ const HotelList = () => {
                           </div>
                         </div>
                         <div className="col-lg-8 col-md-12 col-sm-12">
-                          <Link to="#" className="text">
+                          <Link
+                            to={`/hotels/${hotel.hotel_id}`}
+                            className="text"
+                          >
                             <div className="d-flex align-items-center head">
                               <h3>{hotel.hotel_name},</h3>
                               <span>

@@ -9,11 +9,9 @@ import Packages from "./pages/Packages/Packages";
 import About from "./pages/About/About";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-// import HotelDetail from "./pages/Hotels/HotelDetail";
 import HotelDetail from "./pages/Hotels/HotelDetail";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
-// import data from "../public/data.json";
 
 // Animation
 import { AnimatePresence } from "framer-motion";

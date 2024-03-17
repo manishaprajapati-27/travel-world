@@ -201,8 +201,8 @@
       }
 
       &.even-info {
-        top: 0;
-        transform: translateY(136%);
+        top: inherit;
+        bottom: 0;
 
         img {
           position: relative;
